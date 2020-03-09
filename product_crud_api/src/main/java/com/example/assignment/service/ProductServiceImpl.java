@@ -33,5 +33,11 @@ public class ProductServiceImpl implements ProductService{
 		}
 		return product;
 	}
+
+	@Override
+	public Product addProduct(Product product) {
+    	product.setLastUpdate(new Date());
+    	return productRepository.save(product);
+	}
     
 }

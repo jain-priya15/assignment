@@ -70,5 +70,15 @@ public class ProductServiceTest {
 		productService.getProductDetails(Mockito.anyInt());			
 	}
 	
+	@Test
+	public void addProduct_returnProduct() {
+		//arrange
+		when(productRespository.save(Mockito.any(Product.class))).thenReturn(new Product("bread", new BigDecimal("15.5")));
+		//act
+		Product product = productService.addProduct(new Product("bread", new BigDecimal("15.5")));
+		//assert
+		assertThat(product.getName()).isEqualTo("bread");
+		assertThat(product.getCurrentPrice()).isEqualTo("15.5");
+	}
 
 }

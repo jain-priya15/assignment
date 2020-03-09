@@ -30,7 +30,6 @@ public class Product {
 	@Column(name="current_price")
     private BigDecimal currentPrice;
 	
-	@JsonIgnore
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="last_update", nullable=false)
 	private Date lastUpdate;
