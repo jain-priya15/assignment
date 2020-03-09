@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS product (
+  id Integer(10) unsigned NOT NULL AUTO_INCREMENT,
+  name VARCHAR(10) NOT NULL,
+  curent_price decimal(10,2) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
