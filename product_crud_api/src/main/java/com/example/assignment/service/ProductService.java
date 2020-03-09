@@ -7,4 +7,5 @@ import com.example.assignment.model.Product;
 public interface ProductService {
 	List<Product> listAll();
 	Product getProductDetails(Integer id);
+	Product addProduct(Product product);
 }

@@ -15,6 +15,7 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -71,6 +72,14 @@ public class ProductControllerTest {
 	
 		mockMvc.perform(MockMvcRequestBuilders.get("/api/products/2"))
 		.andExpect(status().isNotFound());
+	}
+	
+	@Test
+	public void addProduct_ShouldCreateProduct() throws Exception{
+		mockMvc.perform(MockMvcRequestBuilders.post("/api/products")
+				.content("{\"name\" : \"milk\",\"current_price\" : 29.9}")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isCreated());
 	}
 	
 }
