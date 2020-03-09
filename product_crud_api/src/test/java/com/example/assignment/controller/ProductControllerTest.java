@@ -82,4 +82,14 @@ public class ProductControllerTest {
 				.andExpect(status().isCreated());
 	}
 	
+	@Test
+	public void updateProduct_ShouldUpdateExistingProduct() throws Exception{
+		Mockito.when(productService.getProductDetails(Mockito.anyInt())).thenReturn(new Product("milk",new BigDecimal("28.9")));
+		
+		mockMvc.perform(MockMvcRequestBuilders.put("/api/products/1")
+				.content("{\"name\" : \"milk\",\"current_price\" : 25.4}")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk());
+	}
+	
 }
