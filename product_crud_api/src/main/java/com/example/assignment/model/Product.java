@@ -23,7 +23,7 @@ public class Product {
 	@Column(unique=true, nullable=false)
 	private Integer id;
 	
-	@Column(name="name", nullable=false)
+	@Column(name="name", nullable=false, unique=true)
     private String name;
 	
 	@JsonProperty("current_price")
