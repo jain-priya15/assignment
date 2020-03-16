@@ -41,8 +41,7 @@ class IntegrationTest {
 				.getForEntity("/api/products/1", Product.class);
 		
 		//assert
-		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-		assertThat(response.getBody().getName()).isEqualTo("milk");
+		assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
 	}
 
 }
