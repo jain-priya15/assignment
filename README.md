@@ -17,7 +17,7 @@ Spring-boot REST API + MySQL
  • currentPrice (BigInteger)
  • lastUpdate(Date)
 
-### For Testing the application following are steps
+### For Testing the API following are steps
 
 Step 1: Set up mySql, insert data using data.sql
 
