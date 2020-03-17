@@ -1,7 +1,23 @@
 # AsellionAssignment
 Spring-boot REST API + MySQL 
 
-Testing the application
+## Create secured endpoints with test cases:
+ • GET /api/products (get a list of products)
+ • GET /api/products/1 (get one product from the list)
+ • PUT /api/products/1 (update a single product)
+ • POST /api/products (create a product)
+
+## The list of products stored in an MySQL database, which pre-populated with product data.
+ • schema.sql
+ • data.sql
+
+## The Product class contain the following fields:
+ • id (Integer)
+ • name (String)
+ • currentPrice (BigInteger)
+ • lastUpdate(Date)
+
+## For testing the application following are steps
 
 Step 1: Set up mySql, insert data using data.sql
 
