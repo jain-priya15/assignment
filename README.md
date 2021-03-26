@@ -1,6 +1,6 @@
 # AsellionAssignment
 Spring-boot REST API + MySQL 
-# HEAD3
+# HEAD 3
 ### Create secured endpoints with test cases:
  • GET /api/products (get a list of products)
  • GET /api/products/1 (get one product from the list)
